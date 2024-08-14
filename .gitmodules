@@ -1,0 +1,3 @@
+[submodule "jenkinstest2"]
+	path = jenkinstest2
+	url = https://github.com/ziv-gabel/jenkinstest2.git
