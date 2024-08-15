@@ -4,7 +4,7 @@ node('dev') {
         $class: 'GitSCM',
         branches: scm.branches,
         doGenerateSubmoduleConfigurations: true,
-        extensions: scm.extensions + [[$class: 'SubmoduleOption', parentCredentials: true]],
+        extensions: scm.extensions + [[$class: 'SubmoduleOption', parentCredentials: true, trackingSubmodules: true]],
         userRemoteConfigs: scm.userRemoteConfigs
     ])
     myPipeline = load "jenkinstest2/Jenkinsfile"
