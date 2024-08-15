@@ -1,5 +1,5 @@
 def myPipeline
-node {
+node('dev') {
     checkout([
         $class: 'GitSCM',
         branches: scm.branches,
@@ -9,4 +9,4 @@ node {
     ])
     myPipeline = load "jenkinstest2/Jenkinsfile"
 }
-myPipeline()
+
